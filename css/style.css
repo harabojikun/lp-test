@@ -1,0 +1,3084 @@
+@charset "utf-8";
+body {
+ font-family: 'Inter', sans-serif;
+ font-size: 16px;
+ color:#fff;
+}
+img {
+  max-width:100%;
+  height:auto;
+}
+html, body {
+ margin: 0;
+ padding: 0;
+ overflow-x: hidden;
+}
+.container {
+  max-width: 1300px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ヘッダー */
+header {
+background-color: #0F172A;
+}
+header .container{
+ max-width: 1300px;
+ align-items: center;
+ padding: 16px ;
+}
+header h1 {
+ font-size: 20px;
+ font-weight: 700;
+ letter-spacing: .04em;
+ margin: 0 ;
+ color: #0F172A; 
+ text-shadow:
+ 1px 1px 0 #fff,
+ -1px 1px 0 #fff,
+ 1px -1px 0 #fff,
+ -1px -1px 0 #fff,
+ 0 1px 0 #fff,
+ 1px 0 0 #fff,
+ 0 -1px 0 #fff,
+ -1px 0 0 #fff;
+ margin-bottom: 6px;
+}
+header h3 {
+  font-size: 15px;
+  color: #fff;
+  text-shadow:
+ 1px 1px 0 blueviolet,
+ -1px 1px 0 blueviolet,
+ 1px -1px 0 blueviolet,
+ -1px -1px 0 blueviolet,
+ 0 1px 0 blueviolet,
+ 1px 0 0 blueviolet,
+ 0 -1px 0 blueviolet,
+ -1px 0 0 blueviolet;
+}
+
+/* メイン */
+#hero {
+  background-color: #0F172A;
+}
+#hero .container {
+ background-image: url(../images/hero-photo.jpg);
+ background-position: center;
+ background-size: cover;
+ height: 365px;
+ display: flex;
+ position: relative;
+}
+#hero .container::before {
+  content: '';
+  width: 100%;
+  height: 101%;
+  background-color: #0F172A;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1;
+}
+/* 王冠（hero内部） */
+.crown-icon {
+  position: absolute;
+  right: 20px;
+  top: -35px;     
+  width: 90px;
+  z-index: 10;
+  pointer-events: none;
+}
+.hero-inner {
+  z-index: 2;
+  width: 100%;
+}
+.hero-copy {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 20px;
+}
+.hero-copy-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* 「その」と画像の間の余白 */
+}
+/* アイコンサイズは調整OK */
+.iwakan-icon {
+  width: 126px;    /* 好きな大きさに調整してOK */
+  height: auto;
+  display: inline-block;
+}
+.hero-subtext  {
+  /* background-color: #0F172A; */
+  width: 230px;
+  margin-left: auto;
+  letter-spacing: 0.07em;
+  line-height: 1.4;
+}
+.hero-subtext span {
+  background-color: #A8861F;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 2px;
+}
+.uwaki-wrap {
+  display: flex;
+  justify-content: center;   /* 中央寄せ */
+  align-items: center;
+  gap: 60px;                  /* 画像同士の間隔 */
+  margin-top: 50px;           /* テキストとの余白 */
+}
+.uwaki-wrap .uwaki-icon {
+  width: 50px;   /* 好きなサイズに調整OK（45〜70pxが最適） */
+  height: auto;
+}
+
+/* 大阪で選ばれる理由 */
+#section-heading {
+  background-color: #0F172A;
+}
+#section-heading .container {
+  height: 160px;
+  padding: 4px 30px;
+  margin-top: -1px;
+}
+.section-title p {
+  font-size: 18px;
+  font-weight: 700;
+  /* background-color: aqua; */
+  width: 200px;
+  letter-spacing: 0.03em;
+}
+.section-title span {
+color: #F97316;
+font-size: 32px;
+font-weight: 800;
+}
+.section-title {
+  text-align: center;
+}
+.section-title img {
+  display: block;
+  width: 260px;       
+  margin: 8px auto 0; 
+}
+
+/* <-- ＜お悩みセクション＞ --> */
+#worry {
+  position: relative;
+  margin-bottom: 60px; /* 三角分の余白 */
+  background: linear-gradient(to bottom, #0F172A 0%, #475569 100%);
+}
+
+#worry .container {
+position: relative;
+font-size: 20px;
+font-weight: 700;
+text-align: center;
+padding: 10px; 
+margin: 0 auto;
+}
+
+/* セクション本体に三角を付ける */
+
+/* 背景を下に伸ばす（★ポイント） */
+#worry::before {
+ content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, #5F8CB3, #315275);
+  z-index: -2;
+}
+
+/* 三角形 */
+#worry::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 185px solid transparent;
+  border-right: 185px solid transparent;
+  border-top: 60px solid #475569;
+  z-index: -1;
+}
+.are-icon {
+  display: block;
+  width: 80px;         
+  margin-right: auto ; 
+}
+.worry-heading {
+  font-size: 15px; 
+}
+.worry-heading span {
+  font-size: 22px;
+}
+.worry-heading .highlight-bg {
+  color: #0F172A;
+  background-color: #F7DF0C; 
+  padding: 0.1em 0.3em;      /* 内側余白 */
+  display: inline-block;     /* 背景を文字幅に合わせる */
+  margin: 16px 0;
+  font-size: 22px !important;
+}
+.worry-heading .highlight-bg span {
+  font-size: 14px;
+}
+.worry-list-text li {
+  font-size: 14px;
+  font-weight: 500;
+}
+.worry-list-text li span {
+  color: red;
+}
+.worry-list-text ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+.worry-list-text ul li {
+  background: rgba(255, 255, 255, 0.05); /* 薄い透明白（上品） */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* 白枠 */
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px; /* ✓マークとテキストの間 */
+  font-size: 14px;
+  line-height: 1.3;
+  box-shadow: 0 3px 6px rgba(255,255,255,0.75);
+  background: rgba(15,23,42,0.6); /* #0F172A の半透明 */
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.card1 {
+  width: 62%;
+  margin-left: auto;
+  margin-right: 40px;
+  /* display: block !important;  */
+}
+.card2 {
+  width: 62%;
+  margin-right: auto;
+}
+.card4 {
+  width: 50%;
+  margin-left: auto;
+}
+.card5 {
+  width: 45%;
+  margin-left: 20px;
+}
+.card-row {
+  display: flex;
+  gap: 12px;         /* カード間の隙間 */
+  margin: 16px 0;    /* 上下余白 */
+}
+.card-row li {
+  margin: 0;         /* 個別設定をリセット */  
+}
+.card3 {
+  width: 40%;
+  margin-right: auto;
+  margin-left: 16px;
+}
+.card-row .card3 {
+  transform: translateY(12px);
+  margin-left: 20px;
+}
+.card5-wrapper {
+  display: flex;
+  align-items: center; /* 上下位置そろえる */
+  gap: 10px; /* カードと写真の間隔 */
+}
+.worry-photo {
+  width: 140px; /* 好きなサイズに調整 */
+  height: auto;
+   -webkit-mask-image: linear-gradient(to bottom, 
+      rgba(0,0,0,1) 60%, 
+      rgba(0,0,0,0) 100%
+  );
+  mask-image: linear-gradient(to bottom, 
+      rgba(0,0,0,1) 60%, 
+      rgba(0,0,0,0) 100%
+  );
+}
+.worry-hitotudemo-1 {
+  font-size: 16px; 
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-align: left;
+}
+.kigaru {
+  position: relative;
+  display: inline-block;     /* ← 5文字の幅を基準にできる */
+  text-align: center;         /* ← 念のため */
+  padding-top: 24px;          /* 点々との距離（調整OK） */
+}
+.kigaru::before {
+  content: "•••••";
+  position: absolute;
+  top: 0;
+  left: 50%;                  /* 5文字の中央 */
+  transform: translateX(calc(-50% + 8px)); 
+  font-size: 16px;            /* 点の大きさ */
+  color: #FACC15;            
+  letter-spacing: 12px;       /* 点々の間隔（調整OK） */
+  white-space: nowrap;
+}
+.worry-bg-block {
+  position: relative;
+  padding: 10px 0px; /* 余白はお好みで */
+  background-image: url(../images/moyamoya.png);
+  background-repeat: no-repeat;
+  background-size: 80%;      
+  background-position: center bottom; /* 女性＆h4,h3 の下側に来る感じ */
+}
+
+/* 漫画①セクション用：中央寄せ＋スマホ幅 */
+#manga-1 {
+  background: linear-gradient(to bottom, #225073 0%, #5F8CB3 100%);
+}
+#manga-1 .container {
+  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
+}
+#manga-1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* プライス */
+/* プライスセクションにキラキラを追加 */
+#price {
+  background: linear-gradient(to bottom, #5F8CB3 0%, #225073 100%);
+  position: relative; /* ← 必須！ */
+}
+#price .container {
+  position: relative;
+  max-width: 1300px;
+font-weight: 700;
+text-align: center;
+overflow: hidden; /* はみ出し防止 */
+padding-bottom: 170px;
+}
+/* 左側キラキラ */
+#price .container::before {
+  content: "";
+  position: absolute;
+  top: 140px;                /* ← 好きな高さに調整 */
+  left: 15px;              /* ← 左の余白に配置（数値調整OK） */
+  width: 30px;             
+  height: 100px;
+  background: url(../images/kirakiraleft.png) no-repeat center/contain;
+  z-index: 5;               /* テキストより前に出したい時は↑10くらい */
+  pointer-events: none;     /* ← クリック邪魔しない */
+}
+/* 右側キラキラ */
+#price .container::after {
+  content: "";
+  position: absolute;
+  top: 100px;              /* ← 左と揃えるなら同じ値に */
+  right: 30px;             /* ← 右側余白（調整OK） */
+  width: 30px;             
+  height: 100px;
+  background: url(../images/kirakiraright.png) no-repeat center/contain;
+  z-index: 5;
+  pointer-events: none;
+}
+.price-camera {
+  position: absolute;
+  right: -10px;   /* 右に出す（お好みで調整） */
+  width: 150px;   /* サイズ調整（モバイル基準） */
+  opacity: 0.9;   /* 少し馴染ませる（任意） */
+  z-index: 1;      /* テキストより後ろにしたい場合は 1 */
+   /* 上端をフェードアウト（CSSマスク） */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,    /* 上は透明 */
+    rgba(0,0,0,1) 55%    /* 25%あたりから通常表示 */
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 55%
+  );
+}
+.price-hero {
+  position: relative;
+}
+.price-hero .price-tagline,
+.price-hero .price-lead,
+.price-hero .price-main,
+.price-hero .price-copy-1,
+.price-hero .price-copy-2 {
+  position: relative;
+  z-index: 10;    /* ← 数字を一気に上げて最前面に固定 */
+}
+.price-tagline {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 60px;
+  letter-spacing: 1px;
+}
+.price-tagline {
+  position: relative;     /* ← 重要！吹き出しの親になる */
+  display: inline-block;  /* ← 吹き出しが文字幅にフィットする */
+  padding: 6px 8px;       /* ← 吹き出しの内側に余白（調整OK） */
+  background: #ffffff00;  /* ← 透明のままでOK */
+  z-index: 10;
+}
+
+/* ★ 吹き出し画像を文字に沿わせて表示 */
+.price-tagline::after {
+  content: "";
+  position: absolute;
+  bottom: -26px;             /* ← 文字の下に表示（調整OK） */
+  left: 46%;
+  transform: translateX(-50%);
+  width: 290px;             /* ← 吹き出し画像の横幅（調整OK） */
+  height: 60px;             /* ← 吹き出し画像の高さ（調整OK） */
+  background: url(../images/fukidasi.png) no-repeat center/contain;
+  z-index: -1;              /* ← 文字の後ろに配置 */
+}
+.price-hero {
+  position: relative;
+}
+.price-lead {
+  position: absolute;
+  left: -90px;     /* ← 好きな位置に調整（0〜20pxくらい） */
+  top: 20px;      /* ← 高さも自由に調整 */
+  transform: rotate(-6deg);
+  font-size: 18px;
+}
+.price-main {
+margin-top: 30px;
+/* margin-bottom: 30px; */
+}
+.price-number {
+  font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #FFE98A 0%, #FF9900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.price-unit {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #FFE98A 0%, #FF9900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.price-copy-1 {
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.price-low {
+  font-size: 30px;
+  color: #E94E3A;
+}
+.price-pro {
+  font-size: 30px;
+  color: #D1C132;
+}
+.price-pro-1 {
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* 理由 */
+#reason {
+  background: linear-gradient(to bottom, #0F172A 0%, #2563EB 100%);
+  position: relative;
+  
+  /* ★ ここが最重要！！ 右上がりに切る */
+  clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -100px;
+}
+
+/* 「そこで」画像 */
+/* そこで アイコン */
+.sokode-wrapper {
+  position: relative;
+  margin-top: -90px;
+}
+.sokode-wrapper img {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 100px;
+    transform: translateX(-50%);
+    z-index: 1;
+ }
+
+
+/* ＜理由セクション＞ */
+
+.reason-erabareru {
+  width: 300px;
+  margin-top: 130px;
+  margin-bottom: 30px;
+}
+#reason .container {
+  max-width: 1300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0;   /* ← 左右の余白をゼロ */
+  position: relative;
+ 
+text-align: center;
+ overflow: visible; /* ← 画像切れ防止 */
+  
+  /* ★ 上端を右上がりにカットする */
+  clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+}
+.reason-heading-en {
+  text-align: left;
+  margin-left: 16px;
+  font-size: 60px;           
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);  
+  letter-spacing: 1px;     
+}
+.reason-item-01 {
+  position: relative;
+}
+.reason-visual {
+  display: flex;
+  justify-content: flex-start;  /* 左寄せに固定 */
+  width: 100%;
+  /* margin-top: 8px; */
+}
+
+/* 左：虫眼鏡 → 全部見せたい */
+.reason-magnifier-mushi01 {
+  width: 50%;
+  object-fit: contain;    /* ← 画像を全部収める */
+  position: relative;
+  transform: translateY(-80px); /* ← 数値は好みで調整（-10〜-40px） */
+  z-index: 2;
+  margin-left: 0;      /* 念のため余白をゼロに */
+  height: auto;
+  margin-left: -20px;    /* ← 左端にピタッ */
+  margin-top: 50px;
+}
+
+/* 右：カメラマン → 多少切れてOK、カッコよくトリミング */
+.reason-magnifier-kamera {
+  width: 50%;
+  height: 260px;
+  object-fit: cover;  
+  object-position: top;
+  /* 下 ＆ 右をフェードアウト */
+  -webkit-mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%),
+    linear-gradient(to right, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  -webkit-mask-composite: intersect;
+  mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%),
+    linear-gradient(to right, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  mask-composite: intersect;
+}
+.reason-text-1 {
+  text-align: left;
+  margin: 0 32px;
+  position: relative;
+  z-index: 2;            /* ← 画像より前に出す */
+  transform: translateY(-80px); /* ← 好きなだけ上へ重ねる（-20〜-60pxなど調整OK） */
+}
+.reason-title {
+  font-size: 20px;
+  font-weight: 700;
+  /* margin-bottom: 16px; */
+  letter-spacing: 2px;
+}
+.reason-percent {
+  width: 80%;
+  margin-left: -10px;
+}
+.reason-body {
+  /* margin: 16px; */
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+.saiban {
+  color:#F97316;
+  font-weight: 600;
+}
+
+/* 理由０２ */
+/* 理由02 背景のスピード図を追加 */
+.reason-item-02 {
+  position: relative;
+  overflow: visible;
+}
+
+/* 背景スピード図 */
+.reason-item-02::before {
+  content: "";
+  position: absolute;
+  top: 140px; /* ←円グラフの下あたりから出したい位置。調整OK */
+  left: 50%;
+  transform: translateX(-50%); /* 中央配置 */
+  width: 340px;   /* 好きなサイズに調整してOK */
+  height: 770px;
+  background: url(../images/speed-figure.png) no-repeat center/contain;
+  opacity: 0.35;  /* ほんのり背景感を出す */
+  z-index: -1;     /* 背景として後ろへ */
+  pointer-events: none;
+}
+.reason-visual {
+  display: flex;
+  width: 100%;
+  position: relative;      /* 重なり調整用 */
+  align-items: flex-end;   /* 画像の下端をそろえる（お好み） */
+  overflow: visible; /* ← 画像のはみ出しを許可 */
+}
+
+/* 左：虫眼鏡 → 全部見せたい */
+.reason-magnifier-mushi02 {
+  width: 50%;  
+  height: auto;       
+  object-fit: contain;    /* ← 画像を全部収める */
+  position: relative;
+  transform: translateY(-40px);  /* ← 好きな高さに調整（-10〜-40pxくらい） */
+  margin-left: -10px; /* ← 左端にぴったり寄せる調整値 */
+  z-index: 2;                    /* 円グラフより前面 */
+}
+/* 右：調査員 */
+.reason-magnifier-senzoku {
+  width: 50%;
+  height: auto;                 /* ← 固定高さをやめる */
+  object-fit: contain;          /* ← 画像を全部収める */
+  position: relative;
+  z-index: 1;                   /* 虫メガネの後ろ側 */
+}
+.reason-text-2 {
+  text-align: left;
+  margin: 70px 32px -20px;
+  position: relative;
+  z-index: 2;            /* ← 画像より前に出す */
+  transform: translateY(-80px); /* ← 好きなだけ上へ重ねる（-20〜-60pxなど調整OK） */
+}
+.reason-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.reason-anshin {
+  width: 35%;
+}
+
+/* 理由２の特徴 */
+.feature-title {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.feature-img-1 {
+  width: 265px;
+  margin-bottom: 10px;
+}
+.feature-img-2 {
+  width: 265px;
+  margin-bottom: 10px;
+}
+.feature-text {
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+  margin-top: 8px;
+  text-align: left;
+  margin: 0 32px 40px;
+}
+.em-tettei {
+  color: #F97316;
+  font-weight: 700;
+  font-size: 1.4em; 
+  padding: 0px 4px 0px 9px
+}
+.em-five {
+  color: #F97316;
+  font-weight: 700;
+  font-size: 2em;  /* 少しだけ数字を大きくする例 */
+  padding: 0px 3px 0px 8px
+}
+
+/* 理由０３ブロック */
+.reason-item.reason-item-03 {
+  margin-top: -100px;  /* ★ REASONに近づける（-10〜-40pxくらいで調整） */
+}
+.reason-visual picture {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: flex-end;
+    overflow: visible;
+}
+.reason-magnifier-mushi03 {
+  width: 40%;
+  margin-left: auto;
+}
+.reason-real {
+  width: 64%;
+  margin-left: -10px;
+}
+.reason-text-3 {
+  text-align: left;
+  margin: 30px 32px 10px;   /* ← 元より上へ寄る */
+  position: relative;
+  top: -80px;  
+}
+.reason-heading-en-3 {
+  text-align: left;
+  margin-left: 16px;
+  font-size: 60px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: 1px;
+  margin-top: 80px;
+}
+
+/* REASON の上に虫眼鏡を重ねる */
+.reason-heading-en-3::after {
+  content: "";
+  position: absolute;
+  top: -5px;             
+  left: 8px;                
+  width: 45px;
+  height: 45px;
+  background: url("images/musimegane03.png") no-repeat center/contain;
+  z-index: 2;
+}
+.phone-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+.pc-only-br {
+  display: none;
+}
+
+/* 下に敷く青スマホ */
+.realtime-blue-phone {
+  width: 75%;           /* 好きに調整可 */
+  display: block;
+  margin-left: 110px;   
+    /* 左 & 右フェード */
+  -webkit-mask-image:
+    linear-gradient(to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 15%,
+      rgba(0,0,0,1) 85%,
+      rgba(0,0,0,0) 100%
+    );
+  mask-image:
+    linear-gradient(to right,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,1) 15%,
+      rgba(0,0,0,1) 85%,
+      rgba(0,0,0,0) 100%
+    );
+}
+
+/* 上に乗るリアルタイムスマホ */
+.realtime-phone { 
+  margin-left: -34px;
+  position: absolute;
+  top: 0px;             /* ← 上下の重なり具合をここで調整 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;           /* 110%だと大きすぎるので調整推奨 */
+  z-index: 2;           /* 手前に出す */
+}
+
+/* 漫画セクション用：中央寄せ＋スマホ幅 */
+#manga-2 {
+ background: linear-gradient(to bottom, #2563EB 0%, #fff 100%);
+}
+#manga-2 .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -10px;
+}
+#manga-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#manga-2 {
+  /* margin: 0 auto; */
+}
+
+/* 嬉しい声 */
+
+#reviews {
+   padding: 60px 20px;
+  /* max-width: 360px; */
+  background: transparent;
+  background: linear-gradient(to bottom, #fff 0%, #2563EB 100%);
+}
+#reviews .container {
+  /* max-width: 360px; */
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
+}
+.voice-heading {
+  position: relative;
+  text-align: center;
+  /* margin-bottom: 30px; */
+  margin: 30px 0;
+}
+.voice-heading .voice-deco-img {
+  position: absolute;
+  top: -20px;            /* 上に少しずらす（調整OK） */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;         
+  height: auto;
+  z-index: 1;            /* 一番下に */
+}
+.voice-heading h2,
+.voice-heading h3,
+.voice-heading h4 {
+  position: relative;
+  z-index: 2;            /* 画像より前 */
+}
+.voice-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+.voice-section h2 span {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 3px;
+  color: #926E41;
+}
+.voice-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #926E41;
+}
+.voice-section h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #926E41;
+  margin-bottom: 20px;
+}
+.voice-section h2,
+.voice-section h2 span,
+.voice-section h3 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+.voice-section h4 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #0F172A;
+}
+.voice-card {
+  position: relative; /* ← 画像を重ねるため必須 */
+  background: #ffffff;
+  padding: 20px 20px 20px; /* ← 上に余白追加（画像を入れる枠を作る） */
+  border-radius: 16px;
+  /* max-width: 340px; */
+  margin: 20px auto 20px; /* ← カード上に余白 */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.user-img {
+  width: 40px;          /* 好きなサイズに調整OK */
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10%;  /*  丸型に  */
+  position: absolute;
+  top: -10px;            /* ← カード内に入り込む高さ */
+  right: 5%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.voice-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.voice-age {
+  font-weight: bold;
+  color: #333;
+}
+.voice-star {
+  color: #FFD700;
+  font-weight: bold;
+}
+.voice-text {
+  line-height: 1.5;
+  color: #444;
+  font-size: 15px;
+}
+.highlight {
+  background: #FFF3A0;   /* 好きな黄色に変更OK */
+  padding: 1px 2px;       /* 帯の余白 */
+}
+
+/* ご相談の流れセクション */
+#flow {
+  background: linear-gradient(to bottom, #2563EB 0%, #fff 100%);
+  margin: 0 auto;
+}
+.flow-section {
+  padding: 40px 20px 50px;
+  background: transparent;
+}
+.flow-section .container {
+  margin: 0 auto;
+  text-align: center;
+}
+.flow-title {
+  /* color: #ffffff; */
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  position: relative; 
+  padding-bottom: 40px; 
+  overflow: visible !important; 
+}
+
+/* STEP1〜6：2列 */
+.step-card {
+  width: calc(50% - 8px);
+  position: relative;
+  background: #ffffff;
+  padding: 18px 12px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  z-index: 2;  /* ← 追加 */
+}
+/* 共通ライン */
+.flow-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;    /* 画像サイズに合わせて調整 */
+  max-width: 80%;
+  z-index: 1;
+  pointer-events: none;
+}
+.line-12 {
+  top: 70px; 
+}
+.line-34 {
+  top: 240px;  
+}
+.line-56 {
+  top: 420px;   
+}
+
+/* 2→3 斜めライン */
+.line-23 {
+  top: 110px;              /* ← STEP2と3の間に合う位置を調整 */
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 4→5 斜めライン */
+.line-45 {
+  top: 288px;              /* ← ここも実際の位置に合わせて調整 */
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 6→7 斜めライン */
+.line-67 {
+  top: 455px;              /* ← STEP6と7の隙間に合わせて調整 */
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* STEP7だけ横並び */
+.step-last {
+  width: 100%;
+  display: flex;            
+  align-items: center;      
+  gap: 12px;                  
+  padding: 16px 20px 16px 26px;              
+  height: auto;              
+}
+
+/* 追加したPC用ラインは、デフォルト（スマホ）では非表示 */
+.line-56-right,
+.line-34-diag,
+.line-67-diag {
+  display: none;
+}
+
+/* STEP番号を少し強調 */
+.step-last .step-number {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+/* アイコン位置の微調整（必要なら） */
+.step-last .step-icon {
+  margin: 0 ;
+  font-size: 28px;
+}
+
+/* テキスト部分 */
+.step-last .step-text-last {
+  margin: 0 8px;
+  text-align: left;          
+  line-height: 1.4;
+}
+
+/* 「無料」バッジ */
+.step-badge {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: #22C55E;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+/* STEP番号 */
+.step-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b58b36;
+  margin-bottom: 8px;
+  position: relative;   
+  padding-bottom: 6px;  
+}
+.step-number::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); 
+  width: 40px;      
+  height: 1px;      
+  background-color: #b58b36;  
+  border-radius: 2px;         
+}
+
+/* アイコン */
+.step-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #b58b36;
+}
+
+/* テキスト */
+.step-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #3267CF;
+}
+
+.step-text-last {
+  color: #E75480;
+  font-weight: 600;
+}
+
+/* FAQ セクション */
+.faq-section {
+  padding: 40px 20px 60px;
+  background: #ffffff;
+  color: #111827;
+}
+
+.faq-section .container {
+  max-width: 375px;      /* スマホ幅に合わせて調整 */
+  margin: 0 auto;
+}
+
+/* 見出し */
+.faq-title-en {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.faq-title-ja {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* リスト全体 */
+.faq-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* 1つ分のQ&A枠 */
+.faq-item {
+  margin-bottom: 12px;
+}
+
+/* 質問の青帯部分 */
+.faq-question {
+  margin: 0px;
+  padding: 6px 8px;
+  background: linear-gradient(to right, #2563EB, #10192D);
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+
+/* 「Q」丸アイコン */
+.faq-q {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+/* 回答部分 */
+.faq-answer {
+  margin: 0;
+  padding: 8px 10px 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  background: #ffffff;
+}
+
+/* お問い合わせフォーム */
+#contact {
+  background: linear-gradient(to bottom, #2563EB 0%, #0F172A 100%);
+}
+.contact-section {
+  padding: 60px 20px 40px;
+  margin: 0 auto;
+  
+}
+
+.contact-section .container {
+  margin: 0 auto;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* フォーム枠 */
+.contact-form {
+  border-radius: 12px;
+  padding: 20px 16px 24px;
+}
+.contact-form .form-group {
+  margin-bottom: 14px;
+}
+.contact-form label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.required-badge {
+  display: inline-block;
+  background: #FACC15;
+  color: #111827;
+  font-size: 11px;
+  padding: 2px 6px;
+  margin-left: 6px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  background-color: #f0f2f7;
+  font-size: 14px;
+  font-family: inherit;
+  color: #111827;
+}
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* 個人情報ボックス（スクロール） */
+.privacy-wrapper {
+  margin: 12px 0 8px;
+}
+.privacy-box {
+  background: #ffffff;
+  color: #111827;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 8px 10px;
+  border-radius: 2px;
+  border: 1px solid #E5E7EB;
+  height: 80px;          
+  overflow-y: auto;       
+}
+
+/* 同意チェック */
+.agree-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+  text-align: center;        
+  margin-top: 18px;
+  font-size: 12px;
+}
+.agree-area input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+/* 送信ボタン */
+.submit-area {
+  margin-top: 28px;
+  text-align: center;
+   background: transparent !important;
+}
+.submit-btn {
+  width: 80%;
+  padding: 10px 0;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ffffff ;  
+  color: #0F172A ;           
+  transition: opacity 0.2s, transform 0.1s;
+  text-align: center;
+}
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+}
+.submit-btn:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+/* 事務所概要 */
+#office {
+  background-color: #0F172A;
+}
+.office-section {
+  padding: 60px 10px 80px;
+  
+  margin-top: -12px;
+  margin: 0 auto;
+}
+.office-section .container {
+  /* max-width: 375px;
+  margin: 0 auto; */
+}
+/* カード本体 */
+.office-card {
+  border-radius: 12px;
+  padding: 24px 20px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.office-card::after {
+  content: "";
+  position: absolute;
+  top: 251px;
+  right: 0;
+  width: 40%;
+  height: 27%;
+  background: url("../images/stationery.png") center/cover no-repeat;
+  opacity: 1;
+    /* 四辺フェード */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,   /* 中心はくっきり */
+    rgba(0, 0, 0, 0) 100%   /* 外側に行くほど透明 */
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.office-block.last::after {
+  display: none;
+}
+.office-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* 各項目 */
+.office-block {
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.office-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  height: 1px;
+  background-color: #A8861F;
+}
+.office-block.last {
+  margin-bottom: 0;
+}
+.office-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.office-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ご挨拶 */
+.greeting-section {
+  padding: 60px 20px 80px;
+  background-color: #fff;   
+}
+.greeting-section .container {
+  margin: 0 auto;
+}
+
+/* 見出し */
+.greeting-title {
+  color: #0F172A;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+/* 見出し下の青いライン */
+.greeting-title-line {
+  width: 70%;
+  height: 3px;
+  margin: 0 auto 16px;
+  background: linear-gradient(to right, #1E3A8A, #3B82F6 50%, #1E3A8A);
+}
+
+/* 本文 */
+.greeting-body p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #111827;
+  margin: 0 0 12px;
+}
+footer {
+  background: #0F172A;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+footer .copyright {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+/* 画面下に固定されるエリア全体 */
+.fixed-cta-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);   /* ← 左右中央にする最重要 */
+  width: 100%;
+  display: flex;
+  z-index: 9999;
+  padding: 6px 4px;
+  box-sizing: border-box;
+
+  /* うしろの影（背景） */
+  background-color: rgba(15, 23, 42, 0.5);
+}
+
+/* 各ボタン共通 */
+.cta-btn {
+  flex: 1;                   
+  height: 70px;                 
+  display: flex;
+  align-items: center;          
+  justify-content: flex-start;   
+  gap: 1px;                 
+  padding: 0 8px;
+  margin: 0 2px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  /* font-size: 13px; */
+  box-sizing: border-box;
+}
+.cta-line {
+  background: #00C300;
+}
+.cta-tel {
+  background: #3F83F8;
+}
+.cta-btn i {
+  font-size: 18px;
+  flex-shrink: 0;            
+  /* margin-left: 8px; */
+}
+.cta-text {
+  flex: 1;
+  text-align: center;           
+  line-height: 1.25;
+  font-size: 12px;
+}
+.cta-number {
+  font-size: 15px;
+  white-space: nowrap;      
+}
+.cta-line i {
+  margin-left: 2px;   
+  font-size: 24px;
+}
+.cta-tel i {
+  margin-left: 2px;   
+  font-size: 20px;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+
+
+@media (min-width: 1024px) {
+  /* PCレイアウト */
+
+.container {
+  width: 100%;
+  max-width: 1300px; 
+  margin: 0 auto;
+  position: relative;
+}
+/* ヘッダー */
+header .container {
+  margin: 0;      /* ← margin: auto の影響を消す */
+}
+
+header h1 {
+ font-size: 30px;
+ text-align: left;
+} 
+header h3 {
+ font-size: 20px;
+} 
+
+  header .container {
+    display: flex;
+    justify-content: space-between; /* 左右に配置 */
+    align-items: center;            /* 上下中央そろえ */
+    max-width: 1200px; 
+  margin: 0 auto;
+  }
+
+  header h1,
+  header h3 {
+     margin: 0;                     /* 変な余白をリセット */
+    white-space: nowrap;            /* テキスト折り返し防止 */
+    padding: 0 50px 0 30px ;
+  }
+
+
+/* 王冠 */
+.crown-icon {
+  position: absolute;
+  right: 100px;        /* 右端からの位置調整 */
+  top: 80px;          /* ヘッダーの下辺から少し下に */
+  width: 160px;        /* 王冠の大きさ（調整OK） */
+
+}
+/* メイン */
+#hero .container {
+ background-image: url(../images/hero-photo-pc.jpg);
+ height: 555px;
+ max-width: 1200px; 
+  margin: 0 auto;
+}
+
+
+.hero-inner {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ← 全体を中央寄せ */
+}
+
+
+.hero-copy {
+  font-size: 50px;
+  margin: 80px auto 0;   /* ← auto で中央寄せ！ */
+  text-align: center;    /* ← テキストを中央寄せ */
+  width: fit-content;    /* ← テキスト幅だけの箱にして中央位置が安定 */
+  
+}
+.hero-copy-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* 「その」と画像の間の余白 */
+}
+
+/* アイコンサイズは調整OK */
+.iwakan-icon {
+  width: 200px;    /* 好きな大きさに調整してOK */
+}
+.pc-hide {
+   display: none;
+  }
+.hero-subtext  {
+  width: auto;       /* ← 固定幅を解除 */
+  max-width: 1000px;  /* ← 好きな幅に調整 */
+  margin: 20px auto;
+  font-size: 20px;
+}
+.hero-subtext span {
+  font-size: 28px;
+}
+.uwaki-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 120px;
+  margin-top: 50px;
+  width: 100%;
+  padding-right: 140px;   /* ← 最初は40pxくらいがちょうど良い */
+}
+
+.uwaki-wrap .uwaki-icon {
+  width: 80px;   /* 好きなサイズに調整OK（45〜70pxが最適） */
+}
+
+/* 大阪で選ばれる理由 */
+#section-heading .container {
+  background-color: #0F172A;
+  height: 330px;
+  padding: 4px 30px;
+  max-width: 1300px; 
+  margin: 0 auto;
+  margin-top: -2px;
+}
+.section-title p {
+  font-size: 28px;
+  width: 400px;
+  letter-spacing: 0.03em;
+}
+.section-title span {
+color: #F97316;
+font-size: 42px;
+}
+.section-title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.section-title img {
+  display: block;
+  width: 500px;       /* 好きなサイズに調整してOK */
+  margin: 30px auto 0; /* 上に8px余白＋中央寄せ */
+}
+
+
+/* <-- ＜お悩みセクション＞ --> */
+#worry .container {
+  position: relative;
+  background: linear-gradient(to bottom, #0F172A 0%, #475569 100%);
+font-size: 20px;
+font-weight: 700;
+text-align: center;
+padding: 20px; 
+margin: 0 auto;
+margin-top: -1px;
+max-width:1300px; 
+margin: 0 auto;
+
+}
+/* セクション本体に三角を付ける */
+#worry {
+  position: relative;
+  margin-bottom: 60px; /* 三角分の余白 */
+
+}
+
+/* 背景を下に伸ばす（★ポイント） */
+#worry::before {
+ content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  width: 100%;
+  /* max-width: 1600px;   */
+  height: 60px;
+  background: linear-gradient(to bottom, #5F8CB3, #315275);
+  z-index: -2;
+ 
+}
+
+/* 三角形 */
+/* #worry::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 185px solid transparent;
+  border-right: 185px solid transparent;
+  border-top: 60px solid #475569;
+  z-index: -1;
+
+} */
+
+.are-icon {
+  width: 140px;         
+  /* margin-left: 300px; */
+  position: absolute;
+    top: 30px;
+    left: 140px;
+}
+
+.worry-heading {
+  font-size: 26px;
+  /* width: 700px; */
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.7;
+  font-weight: 600;
+  margin: 0 0 24px 260px;  /* あれ？の右側あたりに寄せる */
+}
+.worry-heading span {
+  font-size: 36px;
+}
+
+/* ★ この指定を必ず後ろの方に書く！ */
+.worry-heading .highlight-bg {
+  display: block !important;   /* ← ここで必ず改行させる */
+  margin-top: 10px;            
+  padding: 0 20px;
+  background: #FACC15;
+  color: #111827;
+  font-weight: 700;
+  font-size: 32px !important;   /* ← 外側を強制 */
+  width: fit-content;         /* 文字の長さ分だけ黄色にする（お好み） */ 
+}
+
+.worry-heading .highlight-bg span {
+  font-size: 24px;
+}
+
+
+
+.worry-list-text li {
+  font-size: 24px !important;
+  font-weight: 500;
+
+}
+.worry-list-text li span {
+  color: red;
+}
+.worry-list-text ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.card1 {
+  width: 32%;
+  margin: 0 auto;
+  margin-left: 200px;
+  /* display: block !important;  */
+}
+
+.card2 {
+  width: 32%;
+  /* margin-right: auto; */
+  margin-left: 140px;
+}
+
+.card4 {
+  width: 20%;
+  margin-left: auto;
+
+}
+.card5 {
+  width: 35%;
+  margin-left: 20px;
+
+}
+.card-row {
+  /* display: flex; */
+  gap: 12px;         /* カード間の隙間 */
+  margin: 16px 150px;    /* 上下余白 */
+}
+
+.card-row li {
+  /* width: 50%;      */
+  margin: 0;         /* 個別設定をリセット */  
+}
+.card3 {
+  width: 20%;
+  margin-right: auto;
+  margin-left: 16px;
+}
+.card-row .card3 {
+  margin-top: 20px;
+  transform: translateY(12px);
+  margin-left: 20px;
+}
+.card5-wrapper {
+  display: flex;
+  align-items:end; /* 上下位置そろえる */
+  gap: 100px; /* カードと写真の間隔 */
+
+}
+.card5-wrapper {
+    position: absolute;
+    top: 110px;      /* ← ここを調整すれば好きな位置に重なる */
+    right: 100px;        /* 右側に配置（必要に応じて調整） */
+    z-index: 3;
+  }
+.worry-bg-block {
+   background-size: 60%;      /* ★小さくする：70%〜90%で調整 */
+ }
+
+.worry-photo {
+  width: 440px; /* 好きなサイズに調整 */
+  height: auto;
+  content: url(../images/worry-woman-pc.png);
+  -webkit-mask-image: linear-gradient(to bottom, 
+      rgba(0,0,0,1) 60%, 
+      rgba(0,0,0,0) 100%
+  );
+  mask-image: linear-gradient(to bottom, 
+      rgba(0,0,0,1) 60%, 
+      rgba(0,0,0,0) 100%
+  );
+}
+
+.worry-hitotudemo-1 {
+  font-size: 22px; 
+  font-weight: 400;
+  margin-top: 100px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.worry-hitotudemo-1 br {
+    display: none;
+  }
+.worry-hitotudemo-2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.kigaru {
+  position: relative;
+  display: inline-block;     /* ← 5文字の幅を基準にできる */
+  text-align: center;         /* ← 念のため */
+  padding-top: 24px;          /* 点々との距離（調整OK） */
+}
+
+.kigaru::before {
+  content: "•••••";
+  position: absolute;
+  top: 0;
+  left: 50%;                  /* 5文字の中央 */
+  transform: translateX(calc(-50% + 8px)); 
+  font-size: 16px;            /* 点の大きさ */
+  color: #FACC15;             /* 黄色 */
+  letter-spacing: 20px;       /* 点々の間隔（調整OK） */
+  white-space: nowrap;
+}
+
+.worry-bg-block {
+        position: relative;
+        z-index: 1;
+    }
+    
+    h2.worry-heading {
+        margin-left: 110px; /* 配置はインナーで行い、余白はフキダシ分だけ */
+    }
+    img.are-icon {
+        left: 0; 
+    }
+    
+
+    .card5-wrapper {
+        position: static; /* absoluteはやめる */
+        display: flex;
+        margin-inline: auto;
+        justify-content: center;
+    }
+    
+    /* 女性の写真だけabsoluteで、フキダシよりも下にくるようにすると重なっても違和感がない */
+    img.worry-photo {
+        position: absolute;
+        z-index: -1;
+        right:0;
+        top:5%;
+    }
+        
+    .worry-list-text .card1 {
+        display: table;
+        width: auto;
+        margin-left: 10%;
+        margin-right: 0;
+    }
+    .worry-list-text .card2 {
+        display: table;
+        width: auto;
+        margin-left: 5%;
+        margin-right: 0;
+    }
+    
+    .card-row {
+        margin-left: 1%;
+        display: flex;
+        align-items: flex-start; /* これを入れないと、３～４の高さが揃う挙動になる */
+    }
+    
+    .worry-list-text .card3 {
+        width: 320px;
+        margin-left: 4%;
+    }
+    .worry-list-text .card4 {
+        width: 320px;
+        margin-left: 7%;
+    }
+
+/* 漫画セクション用：中央寄せ＋スマホ幅 */
+#manga-1 .container {
+ max-width: 700px; 
+  text-align: center;
+  padding-top: 50px;
+  margin-top: -1px;
+}
+#manga-1 img {
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+/* プライス */
+/* プライスセクションにキラキラを追加 */
+#price {
+  position: relative; /* ← 必須！ */
+}
+#price .container {
+position: relative;
+background: linear-gradient(to bottom, #5F8CB3 0%, #225073 100%);
+font-weight: 700;
+text-align: center;
+overflow: hidden; /* はみ出し防止 */
+padding-bottom: 200px;
+/* max-width: 1024px;  */
+  margin: 0 auto;
+margin-top: -1px;
+}
+/* 左側キラキラ */
+#price .container::before {
+  content: "";
+  position: absolute;
+  top: 200px;                /* ← 好きな高さに調整 */
+  left: 300px;              /* ← 左の余白に配置（数値調整OK） */
+  width: 40px;             /* ← 画像のサイズ。調整してね */
+  height: 100px;
+  background: url(../images/kirakiraleft.png) no-repeat center/contain;
+  z-index: 5;               /* テキストより前に出したい時は↑10くらい */
+  pointer-events: none;     /* ← クリック邪魔しない */
+}
+/* 右側キラキラ */
+#price .container::after {
+  content: "";
+  position: absolute;
+  top: 100px;              /* ← 左と揃えるなら同じ値に */
+  right: 300px;             /* ← 右側余白（調整OK） */
+  width: 40px;             /* ← 画像サイズ（調整OK） */
+  height: 100px;
+  background: url(../images/kirakiraright.png) no-repeat center/contain;
+  z-index: 5;
+  pointer-events: none;
+}
+.price-camera {
+  position: absolute;
+  top: -10px;     /* 少し上に出す */
+  right: 50px;   /* 右に出す（お好みで調整） */
+  width: 330px;   /* サイズ調整（モバイル基準） */
+  opacity: 0.9;   /* 少し馴染ませる（任意） */
+  z-index: 1;      /* テキストより後ろにしたい場合は 1 */
+}
+.price-hero {
+  position: relative;
+}
+
+.price-hero .price-tagline,
+.price-hero .price-lead,
+.price-hero .price-main,
+.price-hero .price-copy-1,
+.price-hero .price-copy-2 {
+  position: relative;
+  z-index: 10;    /* ← 数字を一気に上げて最前面に固定 */
+}
+.price-tagline {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 60px;
+  letter-spacing: 1px;
+}
+.price-tagline {
+  position: relative;     /* ← 重要！吹き出しの親になる */
+  display: inline-block;  /* ← 吹き出しが文字幅にフィットする */
+  padding: 6px 8px;       /* ← 吹き出しの内側に余白（調整OK） */
+  background: #ffffff00;  /* ← 透明のままでOK */
+  z-index: 10;
+}
+
+/* ★ 吹き出し画像を文字に沿わせて表示 */
+.price-tagline::after {
+  content: "";
+  position: absolute;
+  bottom: -36px;             /* ← 文字の下に表示（調整OK） */
+  left: 46%;
+  transform: translateX(-50%);
+  width: 470px;             /* ← 吹き出し画像の横幅（調整OK） */
+  height: 60px;             /* ← 吹き出し画像の高さ（調整OK） */
+  background: url(../images/fukidasi.png) no-repeat center/contain;
+  z-index: -1;              /* ← 文字の後ろに配置 */
+}
+.price-hero {
+  position: relative;
+}
+.price-lead {
+  position: absolute;
+  left: -370px;     /* ← 好きな位置に調整（0〜20pxくらい） */
+  top: 20px;      /* ← 高さも自由に調整 */
+  transform: rotate(-6deg);
+  font-size: 30px;
+}
+.price-main {
+margin-top: 30px;
+margin-bottom: 10px;
+}
+.price-number {
+  font-size: 68px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #FFE98A 0%, #FF9900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.price-unit {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #FFE98A 0%, #FF9900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.price-copy-1 {
+  font-size: 18px;
+  text-align: right;
+  margin-bottom: 20px;
+  margin-right: 380px;
+  letter-spacing: 0.1em;
+}
+.price-copy-2 {
+  letter-spacing: 0.1em;
+}
+.price-low {
+  font-size: 30px;
+  color: #E94E3A;
+}
+.price-pro {
+  font-size: 30px;
+  color: #D1C132;
+}
+.price-pro-1 {
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* 理由 */
+#reason {
+  position: relative;
+}
+#reason::before {
+  content: "";
+  position: absolute;
+  top: -0.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  /* max-width: 1024px; */
+  height: 60px;
+  background: #225073;
+  clip-path: polygon(0 100%, 100% 0, 0 0);
+  z-index: -1;
+}
+
+
+/* 「そこで」画像 */
+.sokode-wrapper img {
+    width: 130px;
+ }
+/* ＜理由セクション＞ */
+.reason-erabareru {
+  width: 600px;
+  margin-top: 130px;
+  margin-bottom: 70px;
+}
+
+#reason .container {
+  /* max-width: 1024px;  */
+  margin: 0 auto;
+  margin-top: -80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0;   /* ← 左右の余白をゼロ */
+  position: relative;
+  background: linear-gradient(to bottom, #0F172A 0%, #2563EB 100%);
+text-align: center;
+ overflow: visible; /* ← 画像切れ防止 */
+  
+  /* ★ 上端を右上がりにカットする */
+  clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+
+}
+
+.reason-heading-en {
+  font-size: 120px;
+  margin-left: 300px;  
+  margin-top: 100px;
+}
+.reason-item-01 {
+  position: relative;
+}
+.reason-visual {
+  display: flex;
+  justify-content: space-between;  /* 左寄せに固定 */
+  width: 100%;
+  margin-top: -90px;
+}
+
+/* 左：虫眼鏡 → 全部見せたい */
+.reason-magnifier-mushi01 {
+  width: 30%;
+  object-fit: contain;    /* ← 画像を全部収める */
+  position: relative;
+  transform: translateY(-80px); /* ← 数値は好みで調整（-10〜-40px） */
+  z-index: 2;
+  height: auto;
+  margin-left: -20px;    /* ← 左端にピタッ */
+   /* ★左側をぼかす */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.3) 15%,
+    rgba(0,0,0,0.8) 35%,
+    black 60%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.3) 15%,
+    rgba(0,0,0,0.8) 35%,
+    black 60%
+  );
+}
+
+/* 右：カメラマン → 多少切れてOK、カッコよくトリミング */
+.reason-magnifier-kamera {
+  width: 40%;
+  height: 650px;
+  object-fit: cover;      /* ← 画面いっぱいに見せる */
+  /* object-position: right center;  */
+}
+
+.reason-text-1 {
+  text-align: left;
+  margin: 0 32px;
+  position: relative;
+  z-index: 2;            /* ← 画像より前に出す */
+  transform: translateY(-80px); /* ← 好きなだけ上へ重ねる（-20〜-60pxなど調整OK） */
+}
+.reason-text-1 {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.reason-title {
+  font-size: 46px;
+}
+.reason-percent {
+  width: 40%;
+  margin-left: -10px;
+}
+
+.reason-body {
+  margin-top: 20px;
+  font-size: 26px;
+  display: inline-block;
+}
+ .reason-body span.saiban::before {
+    content: "\A"; /* 改行 */
+    white-space: pre;
+  }
+
+
+
+  /* 理由０２ */
+/* 理由02 背景のスピード図を追加 */
+
+.reason-heading-en-02 {
+    margin-top: 100px;  /* 好きな値に調整してOK */
+  }
+
+.reason-item-02 {
+  position: relative;
+  overflow: visible;
+}
+
+/* 背景スピード図 */
+.reason-item-02::before {
+  content: "";
+  position: absolute;
+  top: 360px; /* ←円グラフの下あたりから出したい位置。調整OK */
+  left: 70%;
+  transform: translateX(-50%); /* 中央配置 */
+  width: 1440px;   /* 好きなサイズに調整してOK */
+  height: 1000px;
+  background: url(../images/speed-figure.png) no-repeat center/contain;
+  opacity: 0.75;  /* ほんのり背景感を出す */
+  z-index: -1;     /* 背景として後ろへ */
+  pointer-events: none;
+}
+
+.reason-visual {
+  display: flex;
+  width: 100%;
+  position: relative;      /* 重なり調整用 */
+  align-items: flex-end;   /* 画像の下端をそろえる（お好み） */
+  overflow: visible; /* ← 画像のはみ出しを許可 */
+  margin-bottom: 150px;
+}
+
+/* 左：虫眼鏡 → 全部見せたい */
+.reason-magnifier-mushi02 {
+  width: 30%;  
+  height: auto;       
+  object-fit: contain;    /* ← 画像を全部収める */
+  position: relative;
+  transform: translateY(-40px);  /* ← 好きな高さに調整（-10〜-40pxくらい） */
+  margin-left: -10px; /* ← 左端にぴったり寄せる調整値 */
+  z-index: 2;                    /* 円グラフより前面 */
+   /* ★左側をぼかす */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.3) 15%,
+    rgba(0,0,0,0.8) 35%,
+    black 60%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.3) 15%,
+    rgba(0,0,0,0.8) 35%,
+    black 60%
+  );
+}
+/* 右：調査員 */
+.reason-magnifier-senzoku {
+  width: 30%;
+  height: auto;                 /* ← 固定高さをやめる */
+  object-fit: contain;          /* ← 画像を全部収める */
+  position: relative;
+  z-index: 1;                   /* 虫メガネの後ろ側 */
+}
+ .reason-item-02 {
+    position: relative; 
+  }
+
+.reason-text-2 {
+    position: absolute;
+    top: 80%;               /* ← 上下位置。40〜60%で微調整してOK */
+    left: 52%;              /* ← 左右位置。50〜70%で微調整してOK */
+    transform: translate(-50%, -50%);
+    width: 40%;             /* テキスト幅。40〜60%くらいで調整 */
+    margin: 0;
+    text-align: left;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 2px; */
+  }
+  
+
+.reason-title {
+  font-size: 46px;
+}
+.reason-anshin {
+  width: 30%;
+}
+/* 理由02の本文だけ位置を下げる */
+.reason-item-02 .reason-body {
+  margin-top: -10px;   /* ← 好きな数値に調整可能（8px〜24pxが自然） */
+}
+  /* 理由２の特徴 */
+.feature-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.feature-img-1 {
+  width: 300px;
+
+}
+.feature-img-2 {
+  width: 300px;
+}
+.feature-text {
+  font-size: 26px;
+  line-height: 1.6;
+}
+.em-tettei {
+  letter-spacing: 0.1em;
+}
+.em-five {
+  letter-spacing: 0.05em;
+}
+ .feature-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 50px 170px;
+  }
+
+
+/* 理由０３ブロック */
+.reason-heading-en-3 {
+  margin-left: 400px;
+  font-size: 120px;
+}
+.reason-item.reason-item-03 {
+  margin-top: -60px;  /* ★ REASONに近づける（-10〜-40pxくらいで調整） */
+}
+
+.reason-item-03 .reason-visual {
+    display: flex;
+    justify-content: flex-start;  /* ← 左揃え */
+    align-items: flex-start;
+  }
+
+  .reason-magnifier-mushi03 {
+    margin-left: 0 !important;  /* ← ガッツリ左に */
+    padding-left: 0;
+    position: relative;
+    left: 0;
+    width: 80%;   /* 好きに調整OK */
+     /* ★左側をぼかす */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.3) 15%,
+    rgba(0,0,0,0.8) 35%,
+    black 60%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.3) 15%,
+    rgba(0,0,0,0.8) 35%,
+    black 60%
+  );
+  }
+
+
+.reason-text-3 {
+  text-align: left;
+  margin: 30px 32px 10px;   /* ← 元より上へ寄る */
+  position: relative;
+  top: -30px;  
+}
+
+
+  /* 理由03 全体を横並びに（左：虫眼鏡、右：テキスト） */
+  .reason-item-03 {
+    display: flex;
+    align-items: flex-start;  /* 上端をそろえる */
+    gap: 40px;                /* 画像とテキストの間の余白 */
+  }
+
+  /* 左カラム（虫眼鏡） */
+  .reason-item-03 .reason-visual {
+    flex: 0 0 30%;            /* 左カラムの幅（%は調整してOK） */
+  }
+
+  .reason-magnifier-mushi03 {
+    width: 100%;              /* カラム内でめいっぱい表示 */
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  /* 右カラム（見出し＋リアルタイム画像＋本文＋スマホ） */
+  .reason-text-3 {
+    flex: 1;                  /* 残り幅いっぱい使う */
+    position: static;         /* ↑ もともとの top:-80px をリセット */
+    /* top: auto; */
+    margin: 200px 0 0;
+    text-align: left;
+  }
+.pc-only-br {
+    display: block; /* ← PCのときだけ改行として有効化 */
+  }
+.reason-real {
+  width: 30%;
+  margin-left: -10px;
+  display: block;
+}
+/* REASON の上に虫眼鏡を重ねる */
+.reason-heading-en-3::after {
+  content: "";
+  position: absolute;
+  top: -5px;               /* ← 重ね具合はここで調整 */
+  left: 8px;                /* ← 左揃えなのでX位置はここで微調整 */
+  width: 45px;
+  height: 45px;
+  background: url("images/musimegane03.png") no-repeat center/contain;
+  z-index: 2;
+}
+
+  .phone-wrap {
+    position: relative;
+    margin: 60px 0 0 -90px;   /* 左寄せ（中央寄せ解除） */
+    width: 520px;         /* ← 全体の大きさをここで調整！ */
+    /* 350〜480px がおすすめ */
+  }
+
+  /* 下の青いスマホ画像を大きく＆左寄せ */
+  .realtime-blue-phone {
+    width: 100%;          /* wrap の幅いっぱいで大きく */
+    margin-right: 100px;            /* 左寄せ */
+    display: block;
+    
+  }
+
+  /* 上に重ねるスマホも大きさ＆位置を調整 */
+  .realtime-phone {
+    width: 150%;           /* ← 大きく見せたいならここ */
+    left: 55%;             /* ← 位置を少し右に寄せて自然に重ねる */
+    transform: translateX(-50%);
+  }
+
+/* 漫画②セクション用：中央寄せ＋スマホ幅 */
+#manga-2 {
+  background: linear-gradient(to bottom, #2563EB 0%, #fff 100%);
+  margin: 0 auto;
+}
+#manga-2 .container {
+  max-width: 700px; 
+  text-align: center;
+  padding-top: 100px;
+  margin-top: -1px;
+}
+#manga-2 img {
+  /* width: 700px; */
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+
+/* 嬉しい声 */
+
+#reviews {
+   padding: 90px 20px;
+  /* background: transparent; */
+}
+#reviews .container {
+  max-width: 1000px; 
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
+}
+.voice-heading {
+  position: relative;
+  text-align: center;
+  margin: 30px 0;
+}
+.voice-heading .voice-deco-img {
+  position: absolute;
+  top: -40px;            /* 上に少しずらす（調整OK） */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;         
+  height: auto;
+  z-index: 1;            /* 一番下に */
+}
+
+.voice-heading h2,
+.voice-heading h3,
+.voice-heading h4 {
+  position: relative;
+  z-index: 2;            /* 画像より前 */
+}
+
+.voice-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+.voice-section h2 span {
+  font-size: 35px;
+  margin-bottom: 8px;
+
+}
+.voice-section h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.voice-section h3 {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+.voice-section h4 {
+  font-size: 34px;
+  margin-bottom: 60px;
+}
+.voice-card {
+  position: relative; /* ← 画像を重ねるため必須 */
+  padding: 20px 20px 20px; /* ← 上に余白追加（画像を入れる枠を作る） */
+  margin: 20px 140px; /* ← カード上に余白 */
+}
+.user-img {
+  width: 50px;          /* 好きなサイズに調整OK */
+  height: 60px;
+  position: absolute;
+  top: -15px;            /* ← カード内に入り込む高さ */
+  left: 33%;
+}
+.voice-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.highlight {
+  background: #FFF3A0;   /* 好きな黄色に変更OK */
+  padding: 1px 2px;       /* 帯の余白 */
+}
+
+/* ご相談の流れセクション */
+.flow-title {
+  font-size: 34px;
+  margin: 60px 0;
+}
+  .flow-section .container {
+  max-width: 1000px; 
+  margin: 0 auto;
+  }
+
+  .flow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 52px;
+    justify-content: center;
+    position: relative;
+    width: 700px; 
+  margin: 0 auto;
+  }
+
+  /* STEP1〜6 を3列にする */
+  .step-card {
+    width: calc(33.333% - 16px);
+  }
+
+  /* STEP7 横一列＆中央寄せ */
+  .step-last {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  /* まずPCでは一旦全部のラインを消す */
+  .flow-line {
+    display: none;
+    transform: none;   /* ← これ超大事！ translateX(-50%) を消す */
+  }
+
+  /* 1→2 横ライン */
+  .line-12 {
+    display: block;
+    top: 70px;
+    left: 180px;
+    width: 150px;
+  }
+
+  /* 3→4 横ライン */
+  .line-34 {
+    display: block;
+    top: 70px;
+    left: 360px;
+    width: 150px;
+  }
+
+  /* 4→5 の下の横ライン（既存） */
+  .line-56 {
+    display: block;
+    top: 270px;
+    left: 180px;
+    width: 150px;
+  }
+
+  /* 5と6の間の横ライン（新規） */
+  .line-56-right {
+    display: block;
+    top: 270px;
+    left: 360px;
+    width: 150px;
+  }
+
+  /* 3→4 の斜めライン（line3.png） */
+  .line-34-diag {
+    display: block;
+    top: 120px;
+    left: 185px;
+    width: 400px;
+  }
+
+  /* 6→7 の斜めライン（line3.png） */
+  .line-67-diag {
+    display: block;
+    top: 350px;
+    left: 185px;
+    width: 400px;
+  }
+
+  /* もし line2.png で 2→3 / 4→5 / 6→7 の斜めが要らなければ */
+  /* .line-23, .line-45, .line-67 は display:none のままでOK */
+
+
+
+
+/* STEP番号を少し強調 */
+.step-last .step-number {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+/* アイコン位置の微調整（必要なら） */
+.step-last .step-icon {
+  margin: 0 ;
+  font-size: 28px;
+}
+
+
+
+/* 「無料」バッジ */
+.step-badge {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  display: inline-block;
+  padding: 8px 14px;
+  background: #22C55E;
+  color: #ffffff;
+  font-size: 24px;
+  border-radius: 999px;
+}
+
+/* STEP番号 */
+.step-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b58b36;
+  margin-bottom: 8px;
+  position: relative;   
+  padding-bottom: 6px;  
+}
+
+.step-number::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); 
+  width: 40px;      
+  height: 1px;      
+  background-color: #b58b36;  
+  border-radius: 2px;         
+}
+
+/* アイコン */
+.step-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #b58b36;
+}
+
+/* テキスト */
+.step-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #3267CF;
+}
+
+.step-text-last {
+  color: #E75480;
+  font-weight: 600;
+}
+
+
+
+/* FAQ セクション */
+.faq-section {
+  padding: 100px 20px 60px;
+}
+
+.faq-section .container {
+  max-width: 1024px; 
+  margin: 0 auto;
+}
+
+/* 見出し */
+.faq-title-en {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.faq-title-ja {
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+/* 1つ分のQ&A枠 */
+.faq-item {
+  margin-bottom: 22px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* 質問の青帯部分 */
+.faq-question {
+  margin: 0px;
+  padding: 6px 8px;
+  background: linear-gradient(to right, #2563EB, #10192D);
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+
+/* 「Q」丸アイコン */
+.faq-q {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+/* 回答部分 */
+.faq-answer {
+  font-size: 18px;
+}
+
+
+
+/* お問い合わせフォーム */
+
+.contact-section .container {
+  max-width: 800px; 
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 34px;
+  margin: 60px auto;
+}
+
+/* フォーム枠 */
+.contact-form {
+  /* border-radius: 12px; */
+  /* padding: 20px 16px 24px; */
+}
+
+.contact-form .form-group {
+  margin-bottom: 24px;
+}
+ .contact-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;         /* 高さをそろえる */
+    gap: 16px;                   /* ラベルと入力欄の間隔 */
+  }
+
+  .contact-form label {
+    width: 280px;                /* ラベルの幅（調整OK） */
+    margin-bottom: 0;            /* スマホ時の余白をリセット */
+    justify-content: flex-start;   
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="tel"],
+  .contact-form textarea {
+    flex: 1;                     /* 入力欄を残りスペースいっぱいに */
+    max-width: 330px;
+  }
+.contact-form label {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 4px;
+
+}
+
+.required-badge {
+  display: inline-block;
+  background: #FACC15;
+  color: #111827;
+  font-size: 16px;
+  padding: 2px 6px;
+  margin-left: 6px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 22px;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 200px;
+  /* resize: vertical; */
+}
+.contact-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  /* ★ここ！！center → flex-start */
+    gap: 16px;
+  }
+/* 個人情報ボックス（スクロール） */
+.privacy-wrapper {
+  margin: 12px 0 8px;
+}
+
+.privacy-box {
+  background: #ffffff;
+  color: #111827;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 8px 16px;
+  border-radius: 2px;
+  border: 1px solid #E5E7EB;
+  height: 120px;          
+  overflow-y: auto;   
+  margin-bottom: 30px;   
+}
+.agree-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;  
+  padding-left: 155px;  
+}
+
+/* 同意チェック */
+.agree-area {
+  display: flex;           /* これが必須！ */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;       /* ← ここが効くようになる */
+  margin-top: 20px;
+  gap: 18px;
+}
+.agree-area span {
+  white-space: nowrap;  /* ← 折り返し禁止！ */
+}
+.agree-area input[type="checkbox"] {
+  transform: scale(1.8);     /* ← 1.5〜2くらいがちょうど良い */
+  margin-right: 10px;
+}
+
+/* 送信ボタン */
+.submit-area {
+  margin-top: 88px;
+  text-align: center;
+   background: transparent !important;
+}
+
+.submit-btn {
+  width: 70%;
+  padding: 20px 0;
+  border-radius: 999px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ffffff ;  
+  color: #0F172A ;           
+  transition: opacity 0.2s, transform 0.1s;
+  text-align: center;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+}
+
+.submit-btn:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+/* 事務所概要 */
+.office-section {
+  padding: 160px 20px 80px;
+  margin-top: -2px;
+  margin: 0 auto;
+}
+
+.office-section .container {
+ max-width: 800px; 
+  margin: 0 auto;
+}
+
+/* カード本体 */
+.office-card {
+  border-radius: 12px;
+  padding: 24px 20px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.office-card::after {
+  content: "";
+  position: absolute;
+  top: 260px;
+  right: 0;
+  width: 40%;
+  height: 30%;
+ 
+}
+
+
+.office-title {
+  text-align: center;
+  font-size: 34px;
+  /* font-weight: 700; */
+  margin-bottom: 60px;
+}
+
+/* 各項目 */
+.office-block {
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.office-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 500px;
+  height: 1px;
+  background-color: #A8861F;
+}
+.office-block.last {
+  margin-bottom: 0;
+}
+
+.office-block {
+  display: flex;
+  align-items: flex-start; /* 上揃え（住所などの複数行でもきれい） */
+  gap: 30px;               /* ラベルとテキストの間 */
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.office-label {
+  width: 140px;            /* ← ラベルの幅を固定（整列がきれいになる） */
+  font-size: 24px;
+  margin: 0;
+}
+
+.office-text {
+  flex: 1;                 /* ← テキストを残り幅いっぱいに */
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.map-button {
+  display: block;
+  width: 100%;
+  height: 120px;
+  background-color: #e5e7eb;  /* グレーの箱 */
+  color: #111827;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 120px;          /* 高さと合わせて縦中央寄せ */
+}
+
+/* ご挨拶 */
+.greeting-section {
+  padding: 160px 20px 60px;
+}
+
+.greeting-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 見出し */
+.greeting-title {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+/* 見出し下の青いライン */
+.greeting-title-line {
+  width: 100%;
+  height: 3px;
+ 
+}
+/* 本文 */
+.greeting-body p {
+  font-size: 22px;
+  line-height: 1.6;
+
+}
+
+footer .copyright {
+  font-size: 14px;
+}
+
+
+/* 各CTAボタン共通 */
+
+.fixed-cta-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);   /* ← 左右中央にする最重要 */
+  width: 100%;
+  /* max-width: 1900px;            */
+  display: flex;
+  z-index: 9999;
+  padding: 6px 4px;
+  box-sizing: border-box;
+  /* うしろの影（背景） */
+  background-color: rgba(15, 23, 42, 0.5);
+  padding: 20px 0;    
+  justify-content: center;
+}
+
+
+.cta-text {
+  flex: 1;
+  line-height: 1.25;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+  .cta-btn {
+    flex: none;      /* ← flex:1 を解除！ここ重要 */
+    width: 350px;   
+    height: 90px;  
+    font-size: 18px; /* テキスト大きく（任意） */
+  }
+
+  .cta-btn i {
+    font-size: 32px;
+    margin-left: 20px;
+  }
+
+  .cta-number {
+    font-size: 22px;
+  }
+
+body {
+  padding-bottom: 110px;
+}
+
+}

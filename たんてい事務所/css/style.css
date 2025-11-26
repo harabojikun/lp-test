@@ -1,0 +1,937 @@
+@charset "utf-8";
+body {
+ font-family: 'Inter', sans-serif;
+ font-size: 16px;
+ color:#fff;
+}
+img {
+  max-width:100%;
+  height:auto;
+}
+html, body {
+ margin: 0;
+ padding: 0;
+ overflow-x: hidden;
+}
+.container {
+  max-width: 1300px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ヘッダー */
+
+.site-header {
+  background-color: #0F172A; 
+  position: relative; /* ← 絶対配置の基準にする */
+}
+/* 王冠画像の位置調整 */
+.crown-image {
+  position: absolute;
+  right: 5%;
+  top:55%;
+  bottom: -3%;
+  width: 25%;   
+  z-index: 10;
+}
+
+.header-container {
+  max-width: 1300px;   /* サイトの横幅に合わせて調整 */
+  /* margin: 0 auto; */
+  padding: 10px ;
+}
+
+.header-image {
+  display: block;
+  width: 80%;        
+}
+
+
+/* メイン */
+main {
+  background: #225073;
+}
+/* FVセクション */
+.fv {
+  width: 100%;
+}
+
+.fv-image {
+  width: 100%;  
+  height: auto;  
+  display: block;
+}
+
+/* ▼ 大阪で選ばれるワケ：背景エリア */
+.choose-section {
+  background-color: #0F172A;
+}
+
+/* ▼ タイトル画像を中央に配置 */
+.choose-container {
+  max-width: 1300px;
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.choose-title-img {
+  width: 90%;       /* スマホで大きすぎないように */
+  /* max-width: 500px;  */
+  height: auto;
+  display: inline-block;
+}
+/* お悩みセクション */
+.worry-section {
+ padding: 40px 20px 0px ;
+ position: relative;
+ background: linear-gradient(to bottom, #0F172A 0%, #475569 100%);
+overflow: visible;
+}
+/* 下だけ浅い逆三角形にする */
+.worry-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -60px;     /* どれくらい下に突き出すか（調整してOK） */
+  height: 120px;     /* 三角の高さ。小さくすれば浅くなる */
+  background: #475569; 
+  clip-path: polygon(0 50%, 100% 50%, 50% 100%);
+  z-index: 0;       /* 必要なら後ろに下げる */
+}
+.worry-container {
+  max-width: 1300px;
+  text-align: center;
+}
+/* 漫画①セクション用：中央寄せ＋スマホ幅 */
+#manga-1 {
+  background: linear-gradient(to bottom, #225073 0%, #5F8CB3 100%);
+}
+#manga-1 .container {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 80px;
+}
+#manga-1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* プライス */
+.price-section {
+  background: linear-gradient(to bottom, #5F8CB3 0%, #225073 100%);
+  padding: 0px 40px 120px ;
+}
+.price-container {
+  max-width: 1300px;
+  text-align: center;
+}
+
+/* 「そこで」画像 */
+/* そこで アイコン */
+.sokode-wrapper {
+  position: relative;
+  margin-top: -60px;
+}
+.sokode-wrapper img {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 100px;
+    transform: translateX(-50%);
+    z-index: 1;
+ }
+
+/* 理由 */
+.reason-section {
+  padding: 120px 20px 100px ;
+  background: linear-gradient(to bottom, #0F172A 0%, #2563EB 100%);
+  /* ★ ここが最重要！！ 右上がりに切る */
+  clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -70px;
+}
+.reason-container-1,
+.reason-container-2,
+.reason-container-2-1,
+.reason-container-2-2,
+.reason-container-3,
+.reason-container-3-1 {
+  max-width: 1300px;
+  text-align: center;
+}
+.reason1-img,
+.reason2-img {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%);
+}
+.reason3-img,
+.reason3-1-img {
+  mask-image: linear-gradient(to left, transparent 0%, black 10%);
+}
+.reason-container-2-1 {
+  margin-bottom: -20px; 
+  position: relative;
+  width: 130%;
+    left: 50%;
+  transform: translateX(-50%);  /* ← これで左右中央にドンピシャ */
+}
+.reason-container-2-2 {
+  margin-top: -150px;
+  position: relative;
+  z-index: 5;
+}
+.reason2-1-img {
+  position: relative;
+  top: -130px;   /* 浮かせる処理 */
+  z-index: -1;
+}
+
+.feature-text-1 {
+  position: absolute;
+  top: calc(50% - 30px);  /* ← 浮かせた分を補正！ */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 78%;        /* ← 横幅を広げる（お好みで 70〜90%） */
+  max-width: 800px;  /* ← PC時に広がりすぎないように（任意） */
+}
+.reason2-2-img {
+margin-top: -120px;
+}
+
+.reason-body {
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+.saiban {
+  color:#F97316;
+  font-weight: 600;
+}
+.reason-container-2,
+.reason-container-3 {
+  margin-top: 100px;
+}
+.reason-container-2-1 {
+  margin-top: 0px;
+}
+.feature-text-1,
+.feature-text-2 {
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+  margin-top: 8px;
+  text-align: left;
+  margin: 20px 0px 40px;
+}
+.pc-only-br {
+  display: none;
+}
+
+
+/* 漫画②セクション用：中央寄せ＋スマホ幅 */
+#manga-2 .container {
+  margin: 0 auto;
+  text-align: center;
+}
+#manga-2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 嬉しい声 */
+#reviews {
+   padding: 60px 20px;
+  /* max-width: 360px; */
+  background: transparent;
+  background: linear-gradient(to bottom, #fff 0%, #2563EB 100%);
+}
+#reviews .container {
+  /* max-width: 360px; */
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
+}
+.voice-heading {
+  position: relative;
+  text-align: center;
+  /* margin-bottom: 30px; */
+  margin: 30px 0;
+}
+.voice-heading .voice-deco-img {
+  position: absolute;
+  top: -20px;        
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;         
+  height: auto;
+  z-index: 1;       
+}
+.voice-heading h2,
+.voice-heading h3,
+.voice-heading h4 {
+  position: relative;
+  z-index: 2;           
+}
+.voice-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+.voice-section h2 span {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 3px;
+  color: #926E41;
+}
+.voice-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #926E41;
+}
+.voice-section h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #926E41;
+  margin-bottom: 20px;
+  letter-spacing: 0.06em;
+}
+.voice-section h2,
+.voice-section h2 span,
+.voice-section h3 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+.voice-section h4 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #0F172A;
+}
+.voice-card {
+  position: relative; /* ← 画像を重ねるため必須 */
+  background: #ffffff;
+  padding: 20px 20px 20px; /* ← 上に余白追加（画像を入れる枠を作る） */
+  border-radius: 16px;
+  /* max-width: 340px; */
+  margin: 20px auto 20px; /* ← カード上に余白 */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.user-img {
+  width: 40px;          /* 好きなサイズに調整OK */
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10%;  /*  丸型に  */
+  position: absolute;
+  top: -10px;            /* ← カード内に入り込む高さ */
+  right: 5%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.voice-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.voice-age {
+  font-weight: bold;
+  color: #333;
+}
+.voice-star {
+  color: #FFD700;
+  font-weight: bold;
+}
+.voice-text {
+  line-height: 1.5;
+  color: #444;
+  font-size: 15px;
+}
+.highlight {
+  background: #FFF3A0;   
+  padding: 1px 2px;      
+}
+
+
+/* ご相談の流れセクション */
+#flow {
+  background: linear-gradient(to bottom, #2563EB 0%, #fff 100%);
+  margin: 0 auto;
+}
+.flow-section {
+  padding: 40px 20px 50px;
+  background: transparent;
+}
+.flow-section .container {
+  margin: 0 auto;
+  text-align: center;
+}
+.flow-title {
+  /* color: #ffffff; */
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: 0.06em;
+}
+.flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  position: relative; 
+  padding-bottom: 40px; 
+  overflow: visible !important; 
+}
+
+/* STEP1〜6：2列 */
+.step-card {
+  width: calc(50% - 8px);
+  position: relative;
+  background: #ffffff;
+  padding: 18px 12px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  z-index: 2;  /* ← 追加 */
+}
+/* 共通ライン */
+.flow-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;    
+  max-width: 80%;
+  z-index: 1;
+  pointer-events: none;
+}
+.line-12 {
+  top: 70px; 
+}
+.line-34 {
+  top: 240px;  
+}
+.line-56 {
+  top: 420px;   
+}
+
+/* 2→3 斜めライン */
+.line-23 {
+  top: 110px;          
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 4→5 斜めライン */
+.line-45 {
+  top: 288px;            
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 6→7 斜めライン */
+.line-67 {
+  top: 455px;          
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* STEP7だけ横並び */
+.step-last {
+  width: 100%;
+  display: flex;            
+  align-items: center;      
+  gap: 12px;                  
+  padding: 16px 20px 16px 26px;              
+  height: auto;              
+}
+
+/* 追加したPC用ラインは、デフォルト（スマホ）では非表示 */
+.line-56-right,
+.line-34-diag,
+.line-67-diag {
+  display: none;
+}
+
+/* STEP番号を少し強調 */
+.step-last .step-number {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+/* アイコン位置の微調整（必要なら） */
+.step-last .step-icon {
+  margin: 0 ;
+  font-size: 28px;
+}
+
+/* テキスト部分 */
+.step-last .step-text-last {
+  margin: 0 8px;
+  text-align: left;          
+  line-height: 1.4;
+}
+
+/* 「無料」バッジ */
+.step-badge {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: #22C55E;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+/* STEP番号 */
+.step-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b58b36;
+  margin-bottom: 8px;
+  position: relative;   
+  padding-bottom: 6px;  
+}
+.step-number::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); 
+  width: 40px;      
+  height: 1px;      
+  background-color: #b58b36;  
+  border-radius: 2px;         
+}
+
+/* アイコン */
+.step-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #b58b36;
+}
+
+/* テキスト */
+.step-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #3267CF;
+}
+.step-card:nth-of-type(4) .step-text {
+  margin-top: 8px;  
+}
+.step-card:nth-of-type(5) .step-text {
+  margin-top: 8px;  
+}
+.step-text-last {
+  color: #E75480;
+  font-weight: 600;
+}
+
+/* FAQ セクション */
+.faq-section {
+  padding: 40px 20px 60px;
+  background: #ffffff;
+  color: #111827;
+}
+.faq-section .container {
+  /* max-width: 375px;      */
+  margin: 0 auto;
+}
+/* 見出し */
+.faq-title-en {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.06em;
+}
+.faq-title-ja {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* リスト全体 */
+.faq-list {
+  margin: 0;
+  padding: 0;
+}
+/* 1つ分のQ&A枠 */
+.faq-item {
+  margin-bottom: 12px;
+}
+/* 質問の青帯部分 */
+.faq-question {
+  margin: 0px;
+  padding: 6px 8px;
+  background: linear-gradient(to right, #2563EB, #10192D);
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+/* 「Q」丸アイコン */
+.faq-q {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+/* 回答部分 */
+.faq-answer {
+  margin: 0;
+  padding: 8px 10px 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  background: #ffffff;
+}
+
+/* お問い合わせフォーム */
+#contact {
+  background: linear-gradient(to bottom, #2563EB 0%, #0F172A 100%);
+}
+.contact-section {
+  padding: 60px 20px 40px;
+  margin: 0 auto;
+}
+.contact-section .container {
+  margin: 0 auto;
+}
+.contact-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* フォーム枠 */
+.contact-form {
+  border-radius: 12px;
+  padding: 20px 16px 24px;
+}
+.contact-form .form-group {
+  margin-bottom: 14px;
+}
+.contact-form label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.required-badge {
+  display: inline-block;
+  background: #FACC15;
+  color: #111827;
+  font-size: 11px;
+  padding: 2px 6px;
+  margin-left: 6px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  background-color: #f0f2f7;
+  font-size: 14px;
+  font-family: inherit;
+  color: #111827;
+}
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* 個人情報ボックス（スクロール） */
+.privacy-wrapper {
+  margin: 12px 0 8px;
+}
+.privacy-box {
+  background: #ffffff;
+  color: #111827;
+  font-size: 11px;
+  line-height: 1.6;
+  padding: 8px 10px;
+  border-radius: 2px;
+  border: 1px solid #E5E7EB;
+  height: 80px;          
+  overflow-y: auto;       
+}
+
+/* 同意チェック */
+.agree-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+  text-align: center;        
+  margin-top: 18px;
+  font-size: 12px;
+}
+.agree-area input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+/* 送信ボタン */
+.submit-area {
+  margin-top: 28px;
+  text-align: center;
+   background: transparent !important;
+}
+.submit-btn {
+  width: 80%;
+  padding: 10px 0;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ffffff ;  
+  color: #0F172A ;           
+  transition: opacity 0.2s, transform 0.1s;
+  text-align: center;
+}
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+}
+.submit-btn:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+/* 事務所概要 */
+#office {
+  background-color: #0F172A;
+}
+.office-section {
+  padding: 60px 10px 80px;
+  margin-top: -11px;
+  margin: 0 auto;
+}
+
+/* カード本体 */
+.office-card {
+  border-radius: 12px;
+  padding: 24px 20px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.office-card::after {
+  content: "";
+  position: absolute;
+  top: 251px;
+  right: 0;
+  width: 40%;
+  height: 27%;
+  background: url("../images/stationery.png") center/cover no-repeat;
+  opacity: 1;
+    /* 四辺フェード */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,   /* 中心はくっきり */
+    rgba(0, 0, 0, 0) 100%   /* 外側に行くほど透明 */
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.office-block.last::after {
+  display: none;
+}
+.office-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  letter-spacing: 0.06em;
+}
+
+/* 各項目 */
+.office-block {
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.office-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  height: 1px;
+  background-color: #A8861F;
+}
+.office-block.last {
+  margin-bottom: 0;
+}
+.office-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  letter-spacing: 0.05em;
+}
+.office-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.07em;
+}
+
+/* ご挨拶 */
+.greeting-section {
+  padding: 60px 20px 80px;
+  background-color: #fff;   
+}
+.greeting-section .container {
+  margin: 0 auto;
+}
+
+/* 見出し */
+.greeting-title {
+  color: #0F172A;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+/* 見出し下の青いライン */
+.greeting-title-line {
+  width: 70%;
+  height: 3px;
+  margin: 0 auto 16px;
+  background: linear-gradient(to right, #1E3A8A, #3B82F6 50%, #1E3A8A);
+}
+
+/* 本文 */
+.greeting-body p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #111827;
+  margin: 0 0 12px;
+}
+
+footer {
+  background: #0F172A;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+footer .copyright {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+/* 画面下に固定されるエリア全体 */
+.fixed-cta-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);   /* ← 左右中央にする最重要 */
+  width: 100%;
+  display: flex;
+  z-index: 9999;
+  padding: 6px 4px;
+  box-sizing: border-box;
+  /* うしろの影（背景） */
+  background-color: rgba(15, 23, 42, 0.5);
+}
+
+/* 各ボタン共通 */
+.cta-btn {
+  flex: 1;                   
+  height: 70px;                 
+  display: flex;
+  align-items: center;          
+  justify-content: flex-start;   
+  gap: 1px;                 
+  padding: 0 8px;
+  margin: 0 2px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  /* font-size: 13px; */
+  box-sizing: border-box;
+}
+.cta-line {
+  background: #00C300;
+}
+.cta-tel {
+  background: #E11D48;
+}
+.cta-btn i {
+  font-size: 12px;
+  flex-shrink: 0;            
+  /* margin-left: 8px; */
+}
+.cta-text {
+  flex: 1;
+  text-align: center;           
+  line-height: 1.25;
+  font-size: 12px;
+}
+.cta-number {
+  /* font-size: 15px; */
+  white-space: nowrap;      
+}
+.cta-line i {
+  margin-left: 2px;   
+  font-size: 20px;
+}
+.cta-tel i {
+  margin-left: 2px;   
+  font-size: 14px;
+}
+/* メールボタン */
+.cta-mail {
+  background: #F59E0B;  
+}
+.cta-mail i {
+  margin-left: 2px;
+  font-size: 16px;
+}
+
+body {
+  padding-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+  /* PCレイアウト */
+.container {
+  width: 100%;
+  max-width: 1300px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+
+
+
+
+
+}
